@@ -1,3 +1,7 @@
 image: gitpod/workspace-full-vnc
 tasks:
-  - init: yarn install
+  - init: |
+      mkdir -p /workspace/.cache/Cypress
+      ln -s /workspace/.cache/Cypress /home/gitpod/.cache/Cypress
+      yarn install
+  - before: ln -s /workspace/.cache/Cypress /home/gitpod/.cache/Cypress
