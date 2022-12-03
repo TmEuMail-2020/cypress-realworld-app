@@ -5,3 +5,11 @@ tasks:
       ln -s /workspace/.cache/Cypress /home/gitpod/.cache/Cypress
       yarn install
   - before: ln -s /workspace/.cache/Cypress /home/gitpod/.cache/Cypress
+jetbrains:
+  phpstorm:
+    plugins:
+      - com.mallowigi
+      - org.sonarlint.idea
+      - com.tabnine.TabNine
+    prebuilds: 
+      version: stable
